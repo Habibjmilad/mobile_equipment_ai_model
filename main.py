@@ -2,7 +2,7 @@
 import cv2
 import time
 import os
-import pyrebase4
+import pyrebase
 
 
 #helllllllloooo
