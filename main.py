@@ -72,7 +72,7 @@ try:
 
             # Create the filename as before
             timestamp = time.strftime("%Y%m%d%H%M%S")
-            filename = f"captured_image@_{timestamp}.jpg"
+            filename = f"captured_imageee@_{timestamp}.jpg"
 
             # Combine folder path and filename
             full_path = os.path.join(folder_path, filename)
