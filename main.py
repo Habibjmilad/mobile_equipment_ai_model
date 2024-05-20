@@ -22,7 +22,7 @@ config = {
   "storageBucket": "ai-mobileequipment.appspot.com",
   "messagingSenderId": "518377004294",
   "appId": "1:518377004294:web:9486a7a0238892d7431287",
-  "serviceAccount": "/home/habib/CameraRetrival /ai-mobileequipment-firebase-adminsdk-1021m-02b4078411.json",
+  "serviceAccount": "/home/habib/camera_retrival/ai-mobileequipment-firebase-adminsdk-1021m-02b4078411.json",
     }
 
 # Initialize Firebase
@@ -64,7 +64,7 @@ try:
                 continue
 
             # Specify the folder location
-            folder_path = "/home/habib/CameraRetrival/CameraOutput"
+            folder_path = "/home/habib/camera_retrival/CameraOutput"
 
             # Create the folder if it doesn't exist
             if not os.path.exists(folder_path):
@@ -80,7 +80,7 @@ try:
             # Save the file
             cv2.imwrite(full_path, frame)
             # Save the captured frame with a unique filename
-            # filename = f"captured_image_{camera_url.replace(':', '_').replace('/', '_')}.jpg"
+            # filename = f"captured_image.jpg"
             # cv2.imwrite(filename, frame)
 
             print(f"Image captured from camera and saved as {filename}")
@@ -89,7 +89,7 @@ try:
             storage = firebase_storage.storage()
             storage_ref = storage.child("/")
 
-            local_file_path = f"/home/habib/CameraRetrival/CameraOutput/{filename}"
+            local_file_path = f"/home/habib/camera_retrival/CameraOutput/{filename}"
 
             firebase_storage_path = filename
 
