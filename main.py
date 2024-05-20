@@ -53,8 +53,8 @@ try:
       
            
 
-            
-
+            # buffer for camera to open 
+            time.sleep(10)
             # Read a frame from the camera
             ret, frame = cap.read()
 
@@ -97,7 +97,7 @@ try:
             print("File uploaded successfully")
             os.remove(full_path)
             # Wait for one minute before capturing images again
-            time.sleep(10)
+           
 except KeyboardInterrupt:
     print("Program terminated by user.")
 finally:
