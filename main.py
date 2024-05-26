@@ -88,14 +88,14 @@ def main():
                         upload_to_firebase(image_path, filename)
                         os.remove(image_path)
                          # Wait for one minute before the next iteration
-                        time.sleep(60)
+                        time.sleep(30)
             else:
                 # Capture new image and save it locally
                 image_path, filename = capture_and_save_image(cap, folder_path)
                 if image_path:
                     print("No internet connection. Image saved locally.")
                     # Wait for one minute before the next iteration
-                    time.sleep(60)
+                    time.sleep(30)
 
            
     except KeyboardInterrupt:
